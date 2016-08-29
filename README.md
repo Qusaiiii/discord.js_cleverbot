@@ -13,7 +13,9 @@ When you have downloaded nodejs, do the following in a CMD/Terminal:
 - npm install discord.js --save
 - npm install cleverbot-node --save
 - npm install entities --save
-Now edit the fule called **config.json** and place in your token (Yes, that easy)
+
+Now edit the file called **config.json** and place in your token (Yes, that easy)
+
 
 ## How to use
 Open a CMD/Terminal and type the following:
@@ -22,4 +24,5 @@ Open a CMD/Terminal and type the following:
 If we would have done this on my computer, it would be:
 - (Windows) -> node C:\users\alexflipnote\cleverbot\index.js
 - (Linux) -> node /home/alexflipnote/Desktop/cleverbot/index.js
-- (You need to find your directory, don't copy the examples.)
+
+(You need to find your directory, don't copy the examples.)
