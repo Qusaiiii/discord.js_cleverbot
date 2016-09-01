@@ -14,6 +14,8 @@ When you have downloaded nodejs, do the following in a CMD/Terminal:
 - npm install cleverbot-node --save
 - npm install entities --save
 
+(If you get a few errors, Don't worry about them. As long as you don't error on the last line, things should be fine. They're just erroring because you don't have optional files installed, but the script will still run fine.)
+
 Now edit the file called **config.json** and place in your token (Yes, that easy)
 
 
