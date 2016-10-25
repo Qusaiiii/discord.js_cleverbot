@@ -1,10 +1,10 @@
 var config = require("./config.json")
 	  , discord	= require("discord.js")
 	  , cleverbot	= require("./cleverbot.js").cleverbot
-    , bot = new discord.Client({maxCachedMessages: 1000, forceFetchUsers: true});
+          , bot = new discord.Client({maxCachedMessages: 1000, forceFetchUsers: true});
 
 bot.on("message", (msg) => {
-	if (msg.author.id == bot.user.id) return; //Ignore other bots
+	if (msg.user.bot) return; //Ignore other bots
 	if (msg.channel.isPrivate) {
 			cleverbot(bot, msg);
 			return;
@@ -18,19 +18,10 @@ bot.on("message", (msg) => {
 		}
 });
 
+try {
 console.log("Logging in...");
 setTimeout(() => {console.log("Your bot should be good to go, have fun!");}, 5000);
-bot.loginWithToken("Bot " + config.token, (err, token) => {
-	if (err) {
-		console.log(err);
-		setTimeout(() => {
-			process.exit(1);
-		}, 2000);
-	}
-	if (!token) {
-		console.log("Error: failed to connect...");
-		setTimeout(() => {
-			process.exit(0);
-		}, 2000);
-	}
+bot.loginWithToken("Bot " + config.token);
+} catch(err) {
+  console.log(`Error Caught: ${err}\nMake sure you've input a valid token into the config.`);
 });
