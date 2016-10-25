@@ -20,7 +20,7 @@ bot.on("message", (msg) => {
 
 console.log("Logging in...");
 setTimeout(() => {console.log("Your bot should be good to go, have fun!");}, 5000);
-bot.loginWithToken(config.token, (err, token) => {
+bot.loginWithToken("Bot " + config.token, (err, token) => {
 	if (err) {
 		console.log(err);
 		setTimeout(() => {
